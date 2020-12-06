@@ -6,7 +6,7 @@ bootstrap: /usr/local/opt/openjdk/bin/java vendor/KickAssembler/KickAss.jar vend
 
 .PHONY: clean
 clean:
-	-find . -type f -name '.asminfo.txt' -exec rm {} +
+	# -find . -type f -name '.asminfo.txt' -exec rm {} +
 	-find . -type f -name '.source.txt' -exec rm {} +
 	-find . -type f -name '*.sym' -exec rm {} +
 	-find . -type f -name '*.prg' -exec rm {} +
