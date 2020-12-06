@@ -8,3 +8,5 @@ vendor/*
 *.prg
 *.sym
 *.vs
+doc/asminfo.txt
+src/exercises/asminfo.txt

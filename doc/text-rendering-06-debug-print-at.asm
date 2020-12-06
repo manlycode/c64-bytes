@@ -50,23 +50,40 @@ lpstring:
     dex
     bne loop
   end:
-} 
+}
 
 .macro debug_print_at(column, row, string) {
-  .var screen_offset = screen_at(column, row)
-      jmp end_text
-    text:
-      .text string
-    end_text:
+    .var screen_offset = screen_at(column, row)
 
-      ldx #string.size() 
-    loop:
-      lda text - 1, X
-      sta screen_offset - 1, X
-      dex
-      bne loop
-  }
+    jmp end_text
+text:
+    .text string
+end_text:
+    ldx #string.size()
+    beq end
+loop:
+    lda text-1,x
+    sta screen_offset-1,x
+    dex
+    bne loop
+end:
 }
+
+// .macro debug_print_at(column, row, string) {
+//   .var screen_offset = screen_at(column, row)
+//       jmp end_text
+//     text:
+//       .text string
+//     end_text:
+
+//       ldx #string.size() 
+//     loop:
+//       lda text - 1, X
+//       sta screen_offset - 1, X
+//       dex
+//       bne loop
+//   }
+// }
 
 .function screen_at(column, row) {
   .return SCREEN_MEMORY + 40*row + column
