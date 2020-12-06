@@ -1,8 +1,8 @@
 KICK_ASSEMBLER_URL := http://www.theweb.dk/KickAssembler/KickAssembler.zip
 
 .PHONY: bootstrap
-bootstrap: vendor/KickAssembler/KickAss.jar vendor/64spec
-
+bootstrap: /usr/local/opt/openjdk/bin/java vendor/KickAssembler/KickAss.jar vendor/64spec
+# https://phoenixnap.dl.sourceforge.net/project/c64-debugger/C64-65XE-Debugger-v0.64.58-MacOS.zip
 
 .PHONY: clean
 clean:
@@ -18,6 +18,9 @@ clean-deps:
 	touch vendor/.gitkeep
 
 # vendor/64spec:
+#
+/usr/local/opt/openjdk/bin/java:
+	brew install openjdk
 
 vendor/KickAssembler:
 	-mkdir $@

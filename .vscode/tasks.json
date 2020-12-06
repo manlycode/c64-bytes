@@ -20,7 +20,7 @@
         "./bin/kickass-build.sh"
       ],
       "args": [
-        "${workspaceFolder}/build/test-suite.prg",
+        "${workspaceFolder}/build/main.prg",
         "${workspaceFolder}/main.asm"
       ],
       "group": "test",

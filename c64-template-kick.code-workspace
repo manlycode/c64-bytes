@@ -6,7 +6,7 @@
 	],
 	"settings": {
 		"kickassembler.javaRuntime": "/usr/bin/java",
-		"kickassembler.assemblerJar": "/Users/manlycode/git/manlycode/c64-template-kick/vendor/KickAssembler/KickAss.jar",
+		"kickassembler.assemblerJar": "/Users/manlycode/git/manlycode/c64-bytes/vendor/KickAssembler/KickAss.jar",
 		"kickassembler.completionParameterPlaceholders": true,
 		"kickassembler.outputDirectory": "build",
 		"kickassembler.debuggerOptions": "-wait 2500 -autojmp",
