@@ -18,6 +18,7 @@ bootstrap: /usr/local/opt/openjdk/bin/java $(KICK_JAR) $(DEBUG_APP) vendor/64spe
 #
 .PHONY: clean
 clean:
+	# -find . -type f -name '.asminfo.txt' -exec rm {} +
 	-find . -type f -name '.source.txt' -exec rm {} +
 	-find . -type f -name '*.sym' -exec rm {} +
 	-find . -type f -name '*.prg' -exec rm {} +
